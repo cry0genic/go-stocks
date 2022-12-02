@@ -28,3 +28,9 @@ services:
     ports:
       - "6060:6060"
       - "18081:18081"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
