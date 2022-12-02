@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  stocks:
+    build: .
+    container_name: stocks
+    environment:
+      - STOCKS_API_IDLE_TIMEOUT
+      - STOCKS_API_LISTEN_ADDR
+      - STOCKS_API_METRICS
+      - STOCKS_API_READ_HEADERS_TIMEOUT
+      - STOCKS_IEX_BATCH_ENDPOINT
+      - STOCKS_IEX_CALL_TIMEOUT
+      - STOCKS_IEX_METRICS
+      - STOCKS_IEX_TOKEN
+      - STOCKS_LOG
+      - STOCKS_LOG_COMPRESS
+      - STOCKS_LOG_LOCALTIME
+      - STOCKS_LOG_MAX_AGE
+      - STOCKS_LOG_MAX_BACKUPS
+      - STOCKS_LOG_MAX_SIZE
+      - STOCKS_SQLITE_CONN_MAX_LIFETIME
+      - STOCKS_SQLITE_DATABASE
+      - STOCKS_SQLITE_MAX_IDLE_CONN
+      - STOCKS_POLL
+      - STOCKS_PPROF_ADDR
+      - STOCKS_SYMBOLS
+    ports:
+      - "6060:6060"
+      - "18081:18081"
